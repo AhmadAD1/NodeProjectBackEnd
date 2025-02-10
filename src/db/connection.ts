@@ -12,6 +12,7 @@ const connect = async () => {
   }
   try {
     await mongoose.connect(connectionString);
+    console.log( process.env.DB_CONNECTION_STRING);
 
     await initDB();
 

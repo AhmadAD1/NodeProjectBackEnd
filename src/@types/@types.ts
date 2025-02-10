@@ -22,18 +22,34 @@ export type IImage = {
   url: string;
 };
 
-export type IUser = {
+// export type IUser = {
+//   email: string;
+//   phone: string;
+//   password: string;
+//   createdAt: Date;
+//   isBusiness: boolean;
+//   isAdmin: boolean;
+
+//   address: IAddress;
+//   name: IName;
+//   image?: IImage;
+// };
+export type IUserInput = {
   email: string;
   phone: string;
   password: string;
-  createdAt: Date;
   isBusiness: boolean;
-  isAdmin: boolean;
-
   address: IAddress;
   name: IName;
   image?: IImage;
 };
+
+
+export type IUser = IUserInput & {
+  createdAt: Date;
+  isAdmin: boolean;
+};
+
 
 export type ILogin = {
   email: string;
